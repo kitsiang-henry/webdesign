@@ -1,0 +1,50 @@
+body{
+    background-image: url(./img/beautiful\ evening\ sky.jpg);
+}
+
+.image-1{
+    display: block;
+    padding-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading1{
+    font-family: Bahnschrift;
+    text-align: center;
+    color: snow;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.heading2{
+    font-family: Bahnschrift;
+    text-align: center;
+    color: cadetblue;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: auto;
+}
+
+li{
+    float: left;
+}
+
+li a{
+    display: inline;
+    padding: 20px;
+    background-color: salmon;
+    text-align: center;
+    text-decoration: none;
+    font-family: Bahnschrift;
+}
+
+li a:hover{
+    background-color: seashell;
+    color: lightblue;
+}
