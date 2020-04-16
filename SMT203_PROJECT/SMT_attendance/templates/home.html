@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta charset=utf-8 />
+  <script src="{{ url_for('static', filename='upload.js') }}"></script>
+
+  <title>Attendance Taking System - PRE(SENSE)</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+
+  <!-- Custom styles for this template -->
+  <link href="../static/business_frontpage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-black bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWcAAACMCAMAAACXkphKAAAAxlBMVEX///8QK3KYfE0AAGUAAGMAAGYAFGkAJG8AEWkAFmoAH223vdENKXEAIW4AE2nv8POEja4ADmgACmcAG2wAHGz4+fzr7fPj5u7a3ecFJnB7hakYMneVeEbKzt1rd6De4eqwtMetmHbCx9ekq8MvQX6Rcz1TYJDx7uqUnLlHV4vR1eFkb5qnrsWyuM1VY5IAAFw8T4jf18qNlbQiO33IuqXr5t6mjmjd1cgzR4Nfa5g+T4ZyfaPPw7GMaiy3pYfDtJuhh1zDxc3LtLD8AAAX8UlEQVR4nO1dCXuaTNeG4AIIouxoXApqEJdYTRuN/dq+//9PfXPOjBuLkGjT177e13M9NbIN95w5c7YZOe5P4fXpj936jgN+/N+d50/Az+HwzvOV8O31188vX37++vEtfuT14fHhzvN18PIwHD5SDIc/X63Dkdfvw4eHO89Xwevj48MRCNVfXr4+PT19e/35MMSv7jxfAT+GD3GAWAN2/A8T2uSO9+IpSXOC9jvPl+N1SKlk6vlUh9BDX+5q43J8HRImf/96/faNaGRidnx5OOKaEP/w8y7MV8H34fevx38/fX35+Zsq6Ifvv+6u4LXw9JL25RPI96e35Y477rjjjjvuuOOOO+644447bgC9oLVtRH+7Ff86OnNDklWzMrH/dkv+ZViTusoDFLnq/O3G/Lvo8KbCM3jqhURb+afAWY5fI+j0rGLn/wOwW/qeZYLqiqqO1+9fGH7l38MaMYw3BVR8LxxVy01RrFSaJXO9DWe9xClB5x1v4IZHf9hhGE5JJ7q9nkt6kvylpVyiBWEY+DXfJSf50zB8z+M+hFmrbRzTzPN6jR759oXlpR7y7+ILVYApNNJe6hTR3DAqTcHwZEEkj/ZUo9SIn6Px7Xe8w9o8GhROY9lVS/W6TlAXnxetRtqUYy+X2/azKJKTxJLRbdTe8bgPQZZPWeZ50d8d+0pLBIavuXfpgnr39FFSMBNoiKqsN3xgRuuEvOjxvBHGT3Kk5rTwK/h12Y19FTbpdKOfldMZSpjcLfykC9Dm4zjwzHEvkPZ7/Jl7F528kzTwc88jCqauSN0j8fMHJl9PSJNLVFlhxT2u1hPKCjuel1vnr1yaoCjzh+AVkKD5hGfu6ScUZOQlo3yRV+WwCDEbQ5FOpdeamJVZ/LRahZeCArdjD0921EyCV5ESNz5Fh4i9tyj4nMuQwzNRHr+Hw68ZF+/QNfVJITOFjGc1MUzH5cRACA3eGxQU6HE1RfF0UHE0c6Y3p0TEeVPsMRcihed4434McxSHJbeLzdeaTlRmYpj2n+PqlWvIPF8pJtA+0VnqNv5tRHnOMX7scr5uuRIK8EyUx3nF4S8LPoyIaYr42M+p6lVpFxLotZcmk1oZXqWUN8gEwnPC2PkjSPKcNtjO81w4KrLyUtUun7jB2APtmtAGKeiUwNJ5i39NeRbyprjSfxfPL+fLi5YFzDmATeyo5JxHtET8eqsNBpciFxBoop3Jmas4obfJ8+N5eQ4LTiUdYgSk8ZyA1USjvoBAd0Q4UfHiCuIWeE6M4ry1JsFzMYHuVPhi5lqvRJtSyRVoFGfS5ngDbpLnvJrxqT4p9CzguToqcKIv0qYYeROsX1dQ8sW4ZXiLPP/IW9MzrUgJyywNoDeUZgFDe0pOBIdOyYvSjqreGog24qPkFnnOXdPTl5LORxociXCizvNPJPafugWijfMkdHRF7ECbzbjg3yDPL48POfNgra5UCtl2aEbU82e3rap4OBcq8lmBnlfVDTcgNqAcd1Ruj+cnKB0/Px/V6rxayORoQNxGqeeG4saet+K2MgjqORaiMl+O0NZOaP3b4/nlMZdnMm0peS4uoifgE8Q8iW4r1THXM+Bc6UzCclwFfsF3TARDbo7nJ1wLcf4eYB4UUbscNwEZ5RU9590EjDahQJ+JDke6UiJtbckwYd46zy+P+TyjsyAUEWi7SrMKlfm5EWKXMQLnwrR5JkYxqqK2wiBynNEb4PkkmPv0WECekedChjFMmfgQc3DGEuw0qaGG0p9pyhArUYK+DUC/xJ3YG+D5xBb9VYjnOmrdQrHRRoU+xZOzHXAyr2KE3sVOMTJ6ZKJSXYVOTdydvwGejwWILcj8ff4eEfJcTKC5iUQfozQzA7/ETaEO3kbN1tBuhafpKlePCwd3Ezwr7UPrmDj/Pn+PCKlT6sWC/ZsKVR2Ksc5QvQ2Z11GII7RPjFTNP1FZxzqgn+Ns3QDPvLi3b5l2fvh9/h4RDUcUFGiuwaIXfFVOz9zOq7xg7T7x6ba5W+YFqlBs8H7ikf5b4PmQyKDi/Dj8+fVbpkeoOVFtUVKVlMkoC4HIahmUcmr0bu3xLPScnX6aq1VmSVrgEHqDWKtugGdeZuE3EOfH4cPLE/dt+Pj7+5efL69fD3y7fn/ZHS1W+ljjOt2m5PHEuSiGjlTdjZ20t2wryop1NWrolIHiCnxpxz4mX4zT4zfBMy/SsMyv4ePjF5rrfvr9+IA7mnzfXWgLdclUq16TTlNasKrLQoEKDnrxm8SUtJicDW1F2SeiIlTmSdt8Z2wANtBpwqlBfhs88014+NPw98tefJ++U139uEthodl6wlO0VYpXa7WYIc0nfUPXVA7qdgQkJgaKaxzNulgTo59af8V5PhtBuR7SeebFrcX9OC3b+EKV9W5l9wpGq9I8CUhqQfFC9ank0UcJ8bASMccPyf4OCn48jt+Vqwc/Hx3C2BnFeS5cj3MZMnjm9WSs5wsa00xxuELGWYURKVRJK/Ekwax+LGTjFIEmEi8d5twAzEqpf3LGO3ju55xzHWTxnCzxgc3SDvvxQIhT0YskVTNhDzCqlNAKoXH89A526Km4EnE+ugbd/lh7NaEQz8J/Jc9kYiSKg5ZDE6PVqxSd9jJgjU06G5yWx23VEzf6LSHQrq7oRwoK3aRYGETDO+s56TSoR0rW5v0RvItn7mXIgh2+xHvVi4uzrTGWdcbsNuKcHFviESa/m0d92lVPaYdhESuV0TAwmFv3VUpJ4f4ZZPGcyLhR/BjScuiu6ilXWJxltXE2rZ844G8erx9/gSbHkSNi60r5+Nk25Lxjpo41SJs+4wA3SC9Y5HMhsnjOKu97HUI5tN1WlassGHLLwMdJtE1bKfxJWjBC9/GgXLbHxgYAHO94pJ9WjuVkyPw6z5c+2vT3IYvnzHLVr4/DJ24qJCqtPghMGZ4MHqdKhPMkW4UG8l5gnSYvng4lcLwV+VQu8RozxxwiPsA7TP6LkMWzt8664uvwBzdaXKsI3knE8nvNeLoPFTBfZ0K/leOBJTT9pFPuaal+TjKNdEaxiojLkcUzL2Ve8u23M77eajQIyZ0Q54sJSw8zhazne/Kx7YyYqEld7EMESlHPP3uQXr/6J5DJs5CdaH76zxUX/UFJ+QnPxO2Iy6GNdY1U227lhBeOshuL9DtocJTPTnJEQ/HC50yD2TyfsStr/IfmQD/1laDG6ySWQ4hPDOYGBFM8COI5hpJIkPXBgI5P3GilJOrBTlCrn1GPV0Ymz9nrCaZ6tV2oni6Gear3CCSdDF7ipiRiaBou2K2T01qml4i+1iBvFp+40Rs/TyPpikK17NdAJs+ZE3FI3upDPsoo1cqaGjG/bZS2rieUaJPsCi8kHo2LfuLahHoqcVV+DDK9Kt5n7RuQyXPWorAtJl2V5vvdqLdU2WnJp0vLrLXHVxI6S+NRoPsNMyWZ0INMbKIkqWWmsH8MYm3k1EleEdk8e6km8pzVBSil907U1nqQ9u3CO11ZpZF5UUy6mgE+l7hHKUtcLQgaKfFJw6IR1cxm+jq55lPWaAKyeebVRWJQWSNjf7j5TtWmrUopEyGx4rzVsSTaAq+kZLhBzAGpJjEGQSvxOaMGYp6RLSfP8RQ+uXDxj+EMz7zajrXDZgE2KtHZBRip0FZqMs8H9IknWgKUbTWlQ2Yo0OnFC6hUksoGE+uel0q0vapeFD1/L87xzHvS6LiRzgodYEWWaJmc+C5fyq4qUkIdbky+fnoX4DOxrAeAAp1eu7CAQykG0gSJNlIs1M6qqghFlz1eA2d55pWqMN8PR7cOCXxTardmG6UOlQTS6B0Oi63SdNgRrLmkiLG1LaGZwTOsFMyoxWEBkGRjcGsRRe/Gqxy3ulc1iu+IcAWc5xmUh8Ba2ZE8zxAXdK8qzZ+sRFkx3xHnwFpRcxXsr9CCtuzV4yIOgbZUniGMkVGKg8Go1FVDfR4mFFk+WqJouQ1D9sS3j7gAH0cuz8Q1RS1dq0j6YukeZEbzW21dHBQ2QK0FxDcVqbppTGvRLJy0K1VxFZ+JIqyWS/VFXV3JKP4NkWclLQxqtyqGwium9NZdTmezWdhdi2ZVbH+qMHOFeEZvLXgehInZyeq0pOJxci3kS0bV81SzIuqiJFWEQfxt7RpPTiAI3RSNtC2lW8O9piGrKrlQHE87iX63w7YgqV5VNisEkmlKwrr/6bsyJfc5SQC84DDMCml0Wu/Iq0TBaMBXZVWu8qvNNN5DbV1S2+vFYtFue1Iz2YHaOL1Ptf6yMZmMFos1X1VVqZ2gujfdDniP9IXs8etu/29saVaAZ7XYKsyisOxer+ekCtSRsreu7kHAY3v239pebBDfHimJwmVzd2Rjkc9zcjeAO96NkZfPs3Tfo/Fi0I2xzqPQXg53nMVSzuf5k7YQ+qcxNfJ5/rTkzj8Mv57PM69fofTofxxOuQDPd8VxOdR8w47nxbtldynm1XyaP2mv038aywITIRHou2l3IehOnHlQjM9Lpf2bsFb5HiESXWg/3DsysS3gqQCkVcu/O+AfR1QpYnGASMt1tb2Yf/xXVrTWYLXoQOS90QghSLxlkeJO2FjSNFLUeBus3rYBCzQ7zKB0yRWt1pLpLmu6GazGNCJuzRpwaIoGkRPA59b2kI4J99mp7c5ksnZzus3ivZZPmkOPukepL/KQwXq0hHv5S7zvBEf0vrCBnhyF9JnwoBZ7n2jZWPa4Vpd8Ty/Epi4KKQ7GtVdVSx9cOeM0AzLtQi7fLtHQ1KTKGuY+I4X2WK5pnBVtn1l1S2O3PZIlPzvu/BnTg76+JKzUVs80tdgqLd2pwVYhr0qzjt86NHC+q7qL9vvS+M8sl2vvy1Snz+zDVt8px5nQJXd0ZisT21daub6P1chOaZcK3tDLHVHtdPwJ8DzZpRicZ5ezxn3fD0tj358tsLdnRVzCIyQLJYqhVcF3gjfUaYO6EvtxCwcXnFirNXvNgD3CaDLCrQGsb1iUSHfUWCdoawF3U2vAQs9aE2vHrDVsYmAf1NtKYiNjs18OvqkzObbbTbYdm88WT2jKzq4Kdj3NYfBdK8HtI2hdp8QE2i7TpUeOCon2HrzIyGAhZO3Z5ix4ckeAhzm0QcVmwot57mKtMf4AQpPyPF9Jb9gwqwk9vi3tjBqbklIbtFnpHeW5IfQ5re2xk6Im1ochzzaP31KejyAZVPP0SrskrdNes2WFdrstUqJ3PE8XLKfhSPuQDr6sXdqXAPZFVuG0ZaRq/L6gYdGWqKRoAutqyjODX8T3vpznQOeZcNmM53FtrC8o8YQeqxRPKKz9LRNDxjMZ8lNh7zMNJCCR8YwqJc5zTxpU8I03i13J4rI1K9E6JNvsmbTUxy+zG/beaGlfQzgtVTrieds2kDpHGRj4OtaB57U/FpForbybeY55prsv/HGeuTdDZ0LF9MZ4yo11qPNEnn19fWo6ujrns3ZSntdE2rqHrSRCcc4xniNWuzcXw1rt8Ms0/nqKysWVol33lF2tSkuObYHrmU24f4enpAy4voDyP9b7Jy2xhUGtVkNV8lZrY1itG3apDFg8PyPPhI+DiFvU1+TpmpTKs+MVNDku41lbSEyUDjxbI500DHkmOhZ5tmY1vwaTzbYB/GqMZ8vdQjXTRNzbBEETRnlDXzrumE1Oc6nbaB02HgrmVrtMBLobcAK9eW1A/qL1i07J4iLc14LxPCFEVqCE1HprUp6jGZnFNOC53Wh0u8iqGwgboMwKhYDyrLTIM5HnGqcNKgvyPkYqz9y0kFN4Kc/EpBJp0c2BZyD6TbNEkGemTThrXoKfWNHk0O+M6EyIPOPRibRveaDDmzfq89bKZBppDnNAZ88z6amQCHLPsDheRZ7fuh1/KW52PHORTFQH5VkrT31/jUNuVGnseKqDIqJ6A97bKVuk61yutSQmSYPyDHoD5881uVYb1NeWlS7P8Mscn8EzlHCOYzyTV9cXHGxAbJd2a6ZCVI/9wTQIluYKOagKO3LF/UIDqkUbZPZ0RaYj56f6edHnbE+3t+S8MRp2rkDuOZVMB3mGznH1ZiNCnoMFORY2YQbcGqxWmxoTR/rZJap8qW8sVdtxeKSfse6HSPTaXmXwzA2KhO0u4hntHGulwOcdz9R4IhItgwhuJFbBQEfkAnthrQP5B57tve3F8Wh+A89kdqSXxnjmyaFGcwNEtHAktfC1ickNHNJzXbn5hn2JD+LeQOu6IlvNkOB5SjpAa5ubBnyJ88kRz3SHWmtdX2XyTAyjP8yzjXp1gdYn45mtpLDmYh3+ttt0JFKeozoO/0CHKw48k6mqTY2m2TNy0RDgn0kJTbQxcrfzJGyoabI8rHPGe1omHooEXLrF1rS5PEqvTxcbhrg5eyjQsukdzwLaedBroKrCigntNVVoocbjT0RBJ7F1vdZYkvc8x4tfeoWJ/ijPsCYnwCU/toC7mltt5icQhUz95tHz2Cefts+EmQ01ECwBZi1NLx0mt7LXJ27AlMl1t4RSNC6BpbAik6IT7WQoQj8vNICHaYko5aBOD7zBfMycUDCpgYwxbYyjluhumjr8jEYkmhrSJfqOMyM9NQIqLboPywBdQ8eoB47TgauFXd5p7LHWzkqrOA9utSDRH9Ubyza/6oIIOctud1nj7LDbZVW61m5f16gx4AerUaA5wYTFUSbd7cwhpy73pc9OSE4ah1RkZttuqwZXh5NWLRxP1ovFgFkkbqsLXFnYD/6kuyR3oW0nDQhqje7OQXc2XC+cNFCNaFvyPJiFp3NvNVhvoS+i7mZO7ruKuLDbApVWw2fDmZzTGm3gGL7PNqDvYbFa5ogYKUG8KLDHF9PRl8yDd3Awfgr5K3eeL4W9KGLe3Xm+GNZEz/cM7zxfAVMpV0nfeb4GemsjR6TvPF8FVqt5nuiP8WxFDrFsOYgt0393cfee4/SIFdRxnYj85zgueiFuz3F7cAk5Sr6IyFlub78gwvH7kQ236jnk3x4cRbgu+R+eBdddSMQfh++dFekPyrMzlsdgVVpR+w2oaDP3mfQrBmgW5tyyaoZMlxhai3ZkRaa66c4hsqOF0mpJ/HLqCYbrIOBbkNkz61OL6+qLxcLjF4v1c7iV6AZZfnl0A0WBrfoZC++jeqOx27J1jJ7eusSI7tDgVlfok/8vmyxphyGOdYkc6oGD4pZGsGIbveAafItuvDWAgCrc1qqA7+xAQBvdkvCT9pe6EO5czPQOP8pzqDO3dIRhjZVZp36vz3gu9zlwsOs43mciMLqA/I8Fn1wBEiZvuPPfEuMK4L1ZA5HFjbQK7gthcY7exkD7H/+F+SuhNqhnKI8r8VxtibTIKaoc8UyUAHrNbyj7i12ejfHcxfBIKOx+zirBMxyFn7dvJX6Z978WVmCYqUx/XG+c8Cz1wjJudeQ0kecW6g0uKsOId5/xuwGkTKk86yjPGJ50KnUWD0njmVs3e07zlgpcta2YVrX7UZ63zROeCcehDqqjpyBDS8ozN4ZAcYsG67zqarXCoHxPIjy7KosdNQ2a0k3luVPezD9pt7RrwZ1Xkm7L9XjmGoLkcz2M32LRAGBWnnOaSelTdFfTlkBuz/Tmm/2+rD5v4lr7VJ7hJ1o+1sK/iM5cj0+IH66Tae7sDdTAqDMauuE7pzxbq7LVZ/sSKKCfcQ1rj9h0vrnf+ccZSKCB03mmefBbQ2cd81s+Pg/Sycka4KimycCgLNXaJzwTBRKMWQRe2c+DqDeC0j4L5EjAazrPM/0Weea4qScfM/3R5YSRzuomaKkb2wA30OXBiX7mHKO628yZ8ozyjPPgBmwJDtXO/JRn+x/gmdO64hHRH95pfUSrNzYo1laZDYugTBlq7XjmJsKuJz1qx3Fg10FuyVrBNmOQq7PUEP8WmXft1o+qNpo3yjNsdXlwEPN2Vc6E1RXGy+UCtbQ2ex6zPTYCTKG56+bui8hkVlvnWVC6W3AftfC5DFEQ++2565bfgulgizfRy3RXEC14Lu32e9C6pXb6fgg3AHtcuZhn2MckqLGKSsfel3Xi0Cd/2zt2mFlh4Xc+lL30/KhDtzCxHUfrBFNndwING2n7T+R2nU4nud3JzaCxmw4/6Rca/mcR6BfL8x1FEIh3ef4UBHS/6/7fbsc/jxAkOmMj3TuuiK1x5/lTsK7et5f5DNiGcuf5M9DX7zx/Cg7Rhzv+JOz7HhGfg/DO8+fgc3dO/ifw/2GFG8M7BMd4AAAAAElFTkSuQmCC" style="width:130px;height:50px;"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('uploader', filename='upload.html') }}">Take Attendance</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="py-5 mb-5" style="background-image: url('https://i.imgur.com/RPd5Rdb.jpg'); background-size: cover;">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2" style="padding-bottom: 400px; "></h1>
+          <!-- <p class="lead mb-5 text-black-50"> <b> The smarter way of taking attendance </b></p> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>About PRE(SENSE)</h2>
+        <hr>
+        <p>PreSENSE is a web application that enhances the current process of physically taking attendance in Singapore Management University (SMU). Leveraging on facial recognition technology, PreSENSE digitally takes attendance of students in a classroom setting. Teaching Assistants and Professors would get more accurate and time-efficient data through an easy-to-use user web interface that requires minimal inputs  which will automatically generate a clear display of the class attendance for a particular week specified. </p>
+        <a class="btn btn-primary btn-lg" href="https://www.smu.edu.sg/"> SMU Home &raquo;</a>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Contact Us</h2>
+        <hr>
+        <address>
+          <strong> Singapore Management University </strong>
+          <br> School of Information Systems 
+          <br>81 Victoria St, Singapore 188065
+          <br>
+        </address>
+        <address>
+          <abbr title="Phone">Phone:</abbr>
+          +65 6828 0100
+          <br>
+          <abbr title="Email">Email:</abbr>
+          <a href="mailto:#">presense@smu.com</a>
+        </address>
+      </div>
+    </div>
+    <!-- /.row -->
+<!-- 
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; PRE(SENSE) 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
